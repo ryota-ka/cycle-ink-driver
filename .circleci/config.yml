@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            yarn
+      - run:
+          name: Run Prettier
+          command: |
+            yarn prettier:check
+      - run:
+          name: Build
+          command: |
+            yarn build
+            mkdir ./dist
+            cd ./lib
+            npm pack
+            mv ./cycle-ink-driver-*.tgz ../dist
+      - store_artifacts:
+          path: ./dist
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build

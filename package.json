@@ -1,0 +1,30 @@
+{
+  "name": "cycle-ink-driver",
+  "version": "0.1.0",
+  "description": "Ink driver for Cycle.js",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "repository": "https://github.com/ryota-ka/cycle-ink-driver",
+  "author": "Ryota Kameoka <kameoka.ryota@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@cycle/react": "^2.1.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.8.17",
+    "ink": "^2.1.1",
+    "prettier": "^1.17.0",
+    "react": "^16.8.6",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "@cycle/react": ">=2.1.0",
+    "ink": ">=2.0.0",
+    "react": ">=16.8.0",
+    "xstream": "*"
+  },
+  "scripts": {
+    "build": "./bin/build.sh",
+    "prettier:check": "prettier --check src/**/*.ts",
+    "prettier:format": "prettier --write src/**/*.ts"
+  }
+}

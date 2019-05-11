@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react",
+    "jsxFactory": "createIncorporatedElement",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "strict": true,
+    "target": "esnext",
+  },
+  "include": ["src/**/*.ts"]
+}
