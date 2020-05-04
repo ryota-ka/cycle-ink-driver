@@ -16,13 +16,9 @@ jobs:
       - run:
           name: Build
           command: |
-            yarn build
-            mkdir ./dist
-            cd ./lib
-            npm pack
-            mv ./cycle-ink-driver-*.tgz ../dist
+            make sdist
       - store_artifacts:
-          path: ./dist
+          path: ./cycle-ink-driver-*.tgz
 
 workflows:
   version: 2

@@ -2,7 +2,8 @@
   "name": "cycle-ink-driver",
   "version": "0.1.0",
   "description": "Ink driver for Cycle.js",
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "module": "esm/index.mjs",
   "typings": "index.d.ts",
   "repository": "https://github.com/ryota-ka/cycle-ink-driver",
   "author": "Ryota Kameoka <kameoka.ryota@gmail.com>",
@@ -25,7 +26,6 @@
     "xstream": "*"
   },
   "scripts": {
-    "build": "./bin/build.sh",
     "prettier:check": "prettier --check src/**/*.ts",
     "prettier:format": "prettier --write src/**/*.ts"
   }
