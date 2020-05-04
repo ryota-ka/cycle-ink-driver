@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Run Prettier
           command: |
-            yarn prettier:check
+            npx prettier --check .
       - run:
           name: Build
           command: |

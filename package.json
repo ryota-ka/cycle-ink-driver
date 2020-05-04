@@ -24,9 +24,5 @@
     "ink": ">=2.0.0",
     "react": ">=16.8.0",
     "xstream": "*"
-  },
-  "scripts": {
-    "prettier:check": "prettier --check src/**/*.ts",
-    "prettier:format": "prettier --write src/**/*.ts"
   }
 }

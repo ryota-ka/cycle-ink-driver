@@ -10,6 +10,9 @@ build: clean install
 clean:
 	rm -rf ./lib
 
+format:
+	npx prettier --write .
+
 install:
 	yarn install
 
