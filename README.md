@@ -17,36 +17,33 @@ import TextInput from 'ink-text-input';
 import { Stream } from 'xstream';
 
 const sels = {
-    name: Symbol('name'),
+  name: Symbol('name'),
 };
 
 function View({ name }: { name: string }): JSX.Element {
-    return (
-        <Box flexDirection="column">
-            <Box>
-                Name: <TextInput sel={sels.name} value={name} onChange={() => {}} />
-            </Box>
-            {'-'.repeat(20)}
-            <Box>Hello {name}</Box>
-        </Box>
-    );
+  return (
+    <Box flexDirection="column">
+      <Box>
+        Name: <TextInput sel={sels.name} value={name} onChange={() => {}} />
+      </Box>
+      {'-'.repeat(20)}
+      <Box>Hello {name}</Box>
+    </Box>
+  );
 }
 
 function main({ react }: { react: ReactSource }): { react: Stream<JSX.Element> } {
-    const name$ = react
-        .select(sels.name)
-        .events('change')
-        .startWith('');
+  const name$ = react.select(sels.name).events('change').startWith('');
 
-    const view$ = name$.map(name => View({ name }));
+  const view$ = name$.map((name) => View({ name }));
 
-    return {
-        react: view$,
-    };
+  return {
+    react: view$,
+  };
 }
 
 const drivers = {
-    react: makeInkDriver(),
+  react: makeInkDriver(),
 };
 
 run(main, drivers);

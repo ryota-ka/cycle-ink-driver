@@ -9,7 +9,7 @@ type PropsExtensions = {
 
 export function createIncorporatedElement<P = any>(
     type: ReactType<P>,
-    props: P & PropsExtensions | null,
+    props: (P & PropsExtensions) | null,
     ...children: Array<string | ReactElement<any>>
 ): ReactElement<P> {
     if (!props || !props.sel) {
